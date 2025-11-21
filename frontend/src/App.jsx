@@ -43,6 +43,16 @@ import AllStudents from './components/core/Dashboard/AllStudents';
 import AllInstructors from './components/core/Dashboard/AllInstructors';
 
 
+
+import Assignments from "./pages/Assignments/Assignments";
+import AssignmentDetails from "./pages/Assignments/AssignmentDetails";
+import QuizList from "./pages/Quiz/QuizList";
+import QuizStart from "./pages/Quiz/QuizStart";
+import CertificationPage from "./pages/Certification/CertificationPage";
+import AIGenerator from "./pages/AI/AIGenerator";
+
+
+
 function App() {
 
   const { user } = useSelector((state) => state.profile)
@@ -95,6 +105,22 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
         <Route path="courses/:courseId" element={<CourseDetails />} />
+        
+
+
+        <Route path="/assignments" element={<Assignments />} />
+        <Route path="/assignments/:id" element={<AssignmentDetails />} />
+
+        <Route path="/quiz" element={<QuizList />} />
+        <Route path="/quiz/:id" element={<QuizStart />} />
+
+        <Route path="/certifications" element={<CertificationPage />} />
+
+        <Route path="/ai-generator" element={<AIGenerator />} />
+
+
+
+
 
         {/* Open Route - for Only Non Logged in User */}
         <Route

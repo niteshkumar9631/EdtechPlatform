@@ -138,6 +138,8 @@ app.use('/api/v1/certification', certificationRoutes);
 
 // Serve generated certificates
 app.use('/certificates', express.static('certificates'));
+// app.use('/certificates', express.static(path.join(__dirname, 'certificates')));
+
 
 // Default Route
 app.get('/', (req, res) => {
