@@ -133,11 +133,11 @@
 //       if (err) console.error("❌ Download failed:", err.message);
 //     });
 
-//   } catch (err) {
-//     console.error("❌ Export PDF failed:", err);
-//     return res.status(500).json({ success: false, message: err.message });
-//   }
-// };
+  } catch (err) {
+    console.error("❌ Export PDF failed:", err);
+    return res.status(500).json({ success: false, message: err.message });
+  }
+};
 
 
 
