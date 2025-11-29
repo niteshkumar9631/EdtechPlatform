@@ -342,33 +342,33 @@ exports.getAllStudents = async (req, res) => {
 
 
 // ================ get All Instructors ================
-exports.getAllInstructors = async (req, res) => {
-    try {
-        const allInstructorsDetails = await User.find({
-            accountType: 'Instructor'
-        })
-            .populate('additionalDetails')
-            .populate('courses')
-            .sort({ createdAt: -1 });
+// exports.getAllInstructors = async (req, res) => {
+//     try {
+//         const allInstructorsDetails = await User.find({
+//             accountType: 'Instructor'
+//         })
+//             .populate('additionalDetails')
+//             .populate('courses')
+//             .sort({ createdAt: -1 });
 
 
-        const instructorsCount = await User.countDocuments({
-            accountType: 'Instructor'
-        });
+//         const instructorsCount = await User.countDocuments({
+//             accountType: 'Instructor'
+//         });
 
 
-        res.status(200).json(
-            {
-                allInstructorsDetails,
-                instructorsCount,
-                message: 'All Instructors Data fetched successfully'
-            }
-        )
-    } catch (error) {
-        console.error(error)
-        res.status(500).json({
-            message: 'Error while fetching all Instructors',
-            error: error.message
-        })
-    }
-}
+//         res.status(200).json(
+//             {
+//                 allInstructorsDetails,
+//                 instructorsCount,
+//                 message: 'All Instructors Data fetched successfully'
+//             }
+//         )
+//     } catch (error) {
+//         console.error(error)
+//         res.status(500).json({
+//             message: 'Error while fetching all Instructors',
+//             error: error.message
+//         })
+//     }
+// }
