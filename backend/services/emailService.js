@@ -1,31 +1,31 @@
-// const nodemailer = require("nodemailer");
-// require("dotenv").config();
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: process.env.EMAIL_USER,
-//     pass: process.env.EMAIL_PASS,
-//   },
-// });
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
-// exports.sendEmailWithAttachment = async (to, subject, text, attachmentPath) => {
-//   try {
-//     const mailOptions = {
-//       from: process.env.EMAIL_USER,
-//       to,
-//       subject,
-//       text,
-//       attachments: [{ filename: attachmentPath.split("/").pop(), path: attachmentPath }],
-//     };
+exports.sendEmailWithAttachment = async (to, subject, text, attachmentPath) => {
+  try {
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to,
+      subject,
+      text,
+      attachments: [{ filename: attachmentPath.split("/").pop(), path: attachmentPath }],
+    };
 
-//     await transporter.sendMail(mailOptions);
-//     console.log(`✅ Email sent successfully to ${to}`);
-//   } catch (err) {
-//     console.error("❌ Email sending failed:", err.message);
-//     throw new Error("Email sending failed");
-//   }
-// };
+    await transporter.sendMail(mailOptions);
+    console.log(`✅ Email sent successfully to ${to}`);
+  } catch (err) {
+    console.error("❌ Email sending failed:", err.message);
+    throw new Error("Email sending failed");
+  }
+};
  
 
 
