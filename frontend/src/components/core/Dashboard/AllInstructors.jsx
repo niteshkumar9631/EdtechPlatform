@@ -12,23 +12,23 @@ import IconBtn from "../../common/IconBtn";
 
 
 // loading skeleton
-// const LoadingSkeleton = () => {
-//   return (<div className="flex p-5 flex-col gap-6 border-b border-2 border-b-richblack-500">
-//     <div className="flex flex-col sm:flex-row gap-5 items-center mt-7">
-//       <p className='h-[150px] w-[150px] rounded-full skeleton'></p>
-//       <div className="flex flex-col gap-2 ">
-//         <p className='h-4 w-[160px] rounded-xl skeleton'></p>
-//         <p className='h-4 w-[270px] rounded-xl skeleton'></p>
-//         <p className='h-4 w-[100px] rounded-xl skeleton'></p>
-//       </div>
-//     </div>
-//     <div className='flex gap-5'>
-//       <p className="h-7 w-full sm:w-1/2 rounded-xl skeleton"></p>
-//       <p className="h-7 w-full sm:w-1/2 rounded-xl skeleton"></p>
-//       <p className="h-7 w-full sm:w-1/2 rounded-xl skeleton"></p>
-//     </div>
-//   </div>)
-// }
+const LoadingSkeleton = () => {
+  return (<div className="flex p-5 flex-col gap-6 border-b border-2 border-b-richblack-500">
+    <div className="flex flex-col sm:flex-row gap-5 items-center mt-7">
+      <p className='h-[150px] w-[150px] rounded-full skeleton'></p>
+      <div className="flex flex-col gap-2 ">
+        <p className='h-4 w-[160px] rounded-xl skeleton'></p>
+        <p className='h-4 w-[270px] rounded-xl skeleton'></p>
+        <p className='h-4 w-[100px] rounded-xl skeleton'></p>
+      </div>
+    </div>
+    <div className='flex gap-5'>
+      <p className="h-7 w-full sm:w-1/2 rounded-xl skeleton"></p>
+      <p className="h-7 w-full sm:w-1/2 rounded-xl skeleton"></p>
+      <p className="h-7 w-full sm:w-1/2 rounded-xl skeleton"></p>
+    </div>
+  </div>)
+}
 
 
 function AllInstructors() {
