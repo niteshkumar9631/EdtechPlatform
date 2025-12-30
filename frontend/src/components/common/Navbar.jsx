@@ -380,7 +380,7 @@ const Navbar = () => {
                         <Link to="/certifications">
                             <p className={`${matchRoute('/certifications') ? "bg-yellow-25 text-black" : "text-richblack-25"} 
                                 rounded-xl p-1 px-3`}>
-                                Certifications
+                                {/* Certifications */}
                             </p>
                         </Link>
                     </li>
