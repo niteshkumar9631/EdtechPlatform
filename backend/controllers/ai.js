@@ -38,54 +38,112 @@ async function callOpenRouter(prompt, model = 'mistralai/mistral-7b-instruct:fre
 // ]`;
 // }
 
+// function buildPrompt(topics = [], numQuestions = 10, type = 'mixed') {
+//   return `
+// You are a professional university exam paper setter.
+
+// Create a question paper based on the following topics:
+// ${topics.join(', ')}
+
+// General Instructions:
+// - Use clear and simple academic language
+// - Questions must be suitable for university examinations
+// - Do not repeat similar questions
+// - Maintain a balanced difficulty level
+// - Follow a formal exam paper structure
+
+// ------------------------------------
+
+// Section A – Multiple Choice Questions (MCQs)
+
+// - Provide clear MCQs related to the topics
+// - Each question must have four options (A, B, C, D)
+// - Write only the questions and options (no answers)
+
+// ------------------------------------
+
+// Section B – Short Answer Questions
+
+// - Questions should test conceptual understanding
+// - Answers should be possible within 2–3 sentences
+
+// ------------------------------------
+
+// Section C – Long Answer Questions
+
+// - Questions should require detailed explanations
+// - Suitable for 8–10 mark answers
+
+// ------------------------------------
+
+// Formatting Rules:
+// - Section titles must be on separate lines
+// - Questions must appear below their respective section
+// - Number questions clearly (1, 2, 3, …)
+// - Do NOT use JSON, arrays, or code blocks
+// - Output must be plain text only
+
+// Return only the formatted question paper.
+// `;
+// }
+
+
+
 function buildPrompt(topics = [], numQuestions = 10, type = 'mixed') {
   return `
-You are a professional university exam paper setter.
+You are an experienced university examination paper setter.
 
-Create a question paper based on the following topics:
+Design a well-structured question paper based on the following topics:
 ${topics.join(', ')}
 
-General Instructions:
-- Use clear and simple academic language
-- Questions must be suitable for university examinations
-- Do not repeat similar questions
-- Maintain a balanced difficulty level
-- Follow a formal exam paper structure
+General Guidelines:
+- Use clear, concise, and formal academic language
+- Ensure questions are relevant to university-level examinations
+- Avoid repetition of concepts across questions
+- Maintain a balanced mix of easy, moderate, and challenging questions
+- Follow a standard university exam paper format
 
-------------------------------------
+==================================================
 
 Section A – Multiple Choice Questions (MCQs)
 
-- Provide clear MCQs related to the topics
-- Each question must have four options (A, B, C, D)
-- Write only the questions and options (no answers)
+Instructions:
+- Frame objective-type questions strictly from the given topics
+- Each question must have four options labelled A, B, C, and D
+- Only provide the question and options (do not include answers)
 
-------------------------------------
+==================================================
 
 Section B – Short Answer Questions
 
-- Questions should test conceptual understanding
-- Answers should be possible within 2–3 sentences
+Instructions:
+- Questions should test core concepts and understanding
+- Each question should be answerable in 2–3 concise sentences
 
-------------------------------------
+==================================================
 
 Section C – Long Answer Questions
 
-- Questions should require detailed explanations
-- Suitable for 8–10 mark answers
+Instructions:
+- Questions should encourage analytical and descriptive responses
+- Suitable for answers carrying 8–10 marks
+- Avoid ambiguity and ensure clarity
 
-------------------------------------
+==================================================
 
-Formatting Rules:
-- Section titles must be on separate lines
-- Questions must appear below their respective section
-- Number questions clearly (1, 2, 3, …)
-- Do NOT use JSON, arrays, or code blocks
-- Output must be plain text only
+Formatting Instructions:
+- Display section headings on separate, clearly visible lines
+- List questions directly under their respective sections
+- Number questions sequentially throughout the paper
+- Do NOT use JSON, bullet arrays, or code blocks
+- Output must be plain, readable text only
 
-Return only the formatted question paper.
+Return only the final formatted question paper without any extra commentary.
 `;
 }
+
+
+
 
 
 
