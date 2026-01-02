@@ -19,7 +19,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
   const [videoBarActive, setVideoBarActive] = useState("") // store curr SubSection Id
   const navigate = useNavigate()
   const location = useLocation()
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const { sectionId, subSectionId } = useParams()
   const {
