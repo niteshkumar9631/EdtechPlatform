@@ -4,7 +4,7 @@ const Question = require('../models/Question');
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_KEY;
 
-async function callOpenRouter(prompt, model = 'mistralai/mistral-7b-instruct:free') {
+async function callOpenRouter(prompt, model = 'deepseek/deepseek-r1-0528:free') {
   if (!OPENROUTER_API_KEY) throw new Error('Missing OPENROUTER_API_KEY in env');
 
   const url = 'https://openrouter.ai/api/v1/chat/completions';
