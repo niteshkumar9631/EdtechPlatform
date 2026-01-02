@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 
-import IconBtn from './../../common/IconBtn'
+import IconBtn from './../../common/IconBtn';
 import { setCourseViewSidebar } from "../../../slices/sidebarSlice"
 
 import { BsChevronDown } from "react-icons/bs"
@@ -19,7 +19,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
   const [videoBarActive, setVideoBarActive] = useState("") // store curr SubSection Id
   const navigate = useNavigate()
   const location = useLocation()
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const { sectionId, subSectionId } = useParams()
   const {
