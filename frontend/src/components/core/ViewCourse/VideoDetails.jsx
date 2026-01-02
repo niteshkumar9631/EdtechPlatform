@@ -135,17 +135,17 @@ const VideoDetails = () => {
   }
 
   // handle Lecture Completion
-  // const handleLectureCompletion = async () => {
-  //   setLoading(true)
-  //   const res = await markLectureAsComplete(
-  //     { courseId: courseId, subsectionId: subSectionId },
-  //     token
-  //   )
-  //   if (res) {
-  //     dispatch(updateCompletedLectures(subSectionId))
-  //   }
-  //   setLoading(false)
-  // }
+  const handleLectureCompletion = async () => {
+    setLoading(true)
+    const res = await markLectureAsComplete(
+      { courseId: courseId, subsectionId: subSectionId },
+      token
+    )
+    if (res) {
+      dispatch(updateCompletedLectures(subSectionId))
+    }
+    setLoading(false)
+  }
 
   const { courseViewSidebar } = useSelector(state => state.sidebar)
 
