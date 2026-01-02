@@ -34,17 +34,17 @@ export default function CourseReviewModal({ setReviewModal }) {
     setValue("courseRating", newRating)
   }
 
-  // const onSubmit = async (data) => {
-  //   await createRating(
-  //     {
-  //       courseId: courseEntireData._id,
-  //       rating: data.courseRating,
-  //       review: data.courseExperience,
-  //     },
-  //     token
-  //   )
-  //   setReviewModal(false)
-  // }
+  const onSubmit = async (data) => {
+    await createRating(
+      {
+        courseId: courseEntireData._id,
+        rating: data.courseRating,
+        review: data.courseExperience,
+      },
+      token
+    )
+    setReviewModal(false)
+  }
 
   return (
     <div className="fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm">
