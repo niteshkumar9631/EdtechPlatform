@@ -29,12 +29,12 @@ const viewCourseSlice = createSlice({
   },
 })
 
-// export const {
-//   setCourseSectionData,
-//   setEntireCourseData,
-//   setTotalNoOfLectures,
-//   setCompletedLectures,
-//   updateCompletedLectures,
-// } = viewCourseSlice.actions
+export const {
+  setCourseSectionData,
+  setEntireCourseData,
+  setTotalNoOfLectures,
+  setCompletedLectures,
+  updateCompletedLectures,
+} = viewCourseSlice.actions
 
 export default viewCourseSlice.reducer
