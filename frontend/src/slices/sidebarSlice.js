@@ -26,7 +26,7 @@ const sidebarSlice = createSlice({
     }
 })
 
-export const { setOpenSideMenu, setScreenSize, setCourseViewSidebar } = sidebarSlice.actions
+// export const { setOpenSideMenu, setScreenSize, setCourseViewSidebar } = sidebarSlice.actions
 
 export default sidebarSlice.reducer
 
