@@ -129,17 +129,17 @@ router.get('/getAllCourses', getAllCourses);
 // get full course details
 router.post('/getFullCourseDetails', auth, getFullCourseDetails);
 // Get all Courses Under a Specific Instructor
-router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses)
+router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses);
 
 
 // Edit Course routes
-router.post("/editCourse", auth, isInstructor, editCourse)
+router.post("/editCourse", auth, isInstructor, editCourse);
 
 // Delete a Course
-router.post("/deleteCourse", auth, isInstructor, deleteCourse)
+router.delete("/deleteCourse", auth, isInstructor, deleteCourse);
 
 // update Course Progress
-router.post("/updateCourseProgress", auth, isStudent, updateCourseProgress)
+router.post("/updateCourseProgress", auth, isStudent, updateCourseProgress);
 
 
 
